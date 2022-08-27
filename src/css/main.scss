@@ -132,7 +132,8 @@ body {
   flex-direction: column;
   .svg {
     svg {
-      width: 50vw;
+      width: 30vw;
+      height: auto;
       #rect,
       #rect_2 {
         transform-origin: center;
@@ -148,7 +149,7 @@ body {
     }
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1rem;
     color: rgb(50, 50, 50);
   }
@@ -202,6 +203,16 @@ body {
           }
         }
       }
+    }
+  }
+  .loader {
+    .svg {
+      svg {
+        width: 50vw;
+      }
+    }
+    h1 {
+      font-size: 1.3rem;
     }
   }
 }

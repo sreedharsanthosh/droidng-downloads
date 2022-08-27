@@ -132,7 +132,8 @@ body {
   flex-direction: column;
 }
 .loader .svg svg {
-  width: 50vw;
+  width: 30vw;
+  height: auto;
 }
 .loader .svg svg #rect,
 .loader .svg svg #rect_2 {
@@ -149,7 +150,7 @@ body {
           animation: star 1s infinite ease-in-out alternate;
 }
 .loader h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 1rem;
   color: rgb(50, 50, 50);
 }
@@ -223,5 +224,11 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     margin: 0rem;
+  }
+  .loader .svg svg {
+    width: 50vw;
+  }
+  .loader h1 {
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=main.css.map */

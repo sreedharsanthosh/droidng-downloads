@@ -6,7 +6,6 @@ import Loader from "../Loader/Loader";
 import "../css/main.css";
 
 function Dropdown() {
-  const [devices, setDevices] = useState([]);
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
@@ -14,12 +13,10 @@ function Dropdown() {
     const effectFun = async () => {
       await axios
         .get("https://dinfo.droid-ng.eu.org/get.php")
-        .then(async (res) => {
-          await setDevices(res.data.data);
+        .then((response) => {
           const deviceArray = [];
-          console.log(res.data.data);
           // eslint-disable-next-line
-          res.data.data.map((device) => {
+          response.data.data.map((device) => {
             axios
               .get(
                 `https://ota.droid-ng.eu.org/v1.php?device=${device.codename}&type=release&incr=null`
@@ -32,10 +29,9 @@ function Dropdown() {
                   data: res.data,
                 };
                 deviceArray.push(deviceObj);
-                if (deviceArray.length === devices.length) {
+                if (deviceArray.length === response.data.data.length) {
                   setData(deviceArray);
                   setLoaded(true);
-                  console.log(deviceArray[1]);
                 }
               })
               .catch((err) => console.log(err));
