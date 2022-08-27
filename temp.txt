@@ -1,0 +1,19 @@
+axios
+            .get(
+              `https://ota.droid-ng.eu.org/v1.php?device=${device.codename}&type=release&incr=null`
+            )
+            .then((res) => {
+              const deviceObj = {
+                device: device.name,
+                codename: device.codename,
+                data: res.data,
+              };
+              console.log(res.data);
+              deviceArray.push(deviceObj);
+              if (deviceArray.length === device.length) {
+                setData(deviceArray);
+                setLoaded(true);
+                console.log(deviceArray);
+              }
+            })
+            .catch((err) => console.log(err));

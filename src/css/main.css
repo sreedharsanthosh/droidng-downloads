@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ececec;
+}
+
+.nav {
+  position: relative;
+  margin: 3vh;
+  display: flex;
+  align-items: center;
+  color: rgb(50, 50, 50);
+}
+.nav img {
+  width: 100px;
+  margin: 0rem 0.4rem;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown .device-box-active {
+  height: auto !important;
+  transition: height 0.5s ease-in;
+}
+.dropdown .device-box {
+  background: white;
+  width: 70%;
+  padding: 1.5rem 2rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  overflow: hidden;
+  transition: height 1s ease-out;
+  color: rgb(50, 50, 50);
+  box-shadow: -3px 3px 9px 0px rgba(0, 0, 0, 0.3);
+}
+.dropdown .device-box button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .dropdown .device-box {
+    width: 90%;
+    padding: 0rem 1rem;
+  }
+  .dropdown .device-box .main-data .icon {
+    width: 30px;
+  }
+  .dropdown .device-box .main-data h1 {
+    font-size: 1.8rem;
+  }
+}
+.dropdown .device-box .main-data {
+  align-items: center;
+  display: flex;
+  color: rgb(83, 83, 83);
+}
+.dropdown .device-box .main-data h1 {
+  font-size: 2rem;
+  margin: 0.3rem;
+}
+.dropdown .device-box .dropdown-data {
+  margin: 2rem 4rem;
+}
+.dropdown .device-box .dropdown-data h1 {
+  color: rgb(83, 83, 83);
+  font-size: 2rem;
+  margin: 0.7rem 0rem;
+}
+.dropdown .device-box .dropdown-data .buttons {
+  padding: 1rem 0rem;
+  color: rgb(50, 50, 50);
+}
+.dropdown .device-box .dropdown-data .buttons .btn1 {
+  border-radius: 6px;
+  padding: 0.6rem 2rem;
+  background: #ff9793;
+  border: 1px solid #ff9793;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+.dropdown .device-box .dropdown-data .buttons .btn1:hover {
+  background: transparent;
+}
+.dropdown .device-box .dropdown-data .buttons .btn1:hover a {
+  color: black;
+}
+.dropdown .device-box .dropdown-data .buttons .btn1 a {
+  text-decoration: none;
+  color: white;
+}
+.dropdown .device-box .dropdown-data .btn2 {
+  border-radius: 6px;
+  padding: 0.6rem 2rem;
+  border: 1px solid #ff6d67;
+  margin: 0rem 1rem;
+  background: transparent;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+.dropdown .device-box .dropdown-data .btn2:hover {
+  background: #ff6d67;
+}
+.dropdown .device-box .dropdown-data .btn2:hover a {
+  color: white;
+}
+.dropdown .device-box .dropdown-data .btn2 a {
+  text-decoration: none;
+  color: black;
+}
+
+.loader {
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  position: absolute;
+  top: 0vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loader .svg svg {
+  width: 50vw;
+}
+.loader .svg svg #rect,
+.loader .svg svg #rect_2 {
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation: rect 3s infinite ease-in-out alternate;
+          animation: rect 3s infinite ease-in-out alternate;
+}
+.loader .svg svg #star,
+.loader .svg svg #star_3 {
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation: star 1s infinite ease-in-out alternate;
+          animation: star 1s infinite ease-in-out alternate;
+}
+.loader h1 {
+  font-size: 4rem;
+  margin: 1rem;
+  color: rgb(50, 50, 50);
+}
+
+@-webkit-keyframes eye {
+  from {
+    r: 15px;
+  }
+  to {
+    r: 20px;
+  }
+}
+
+@keyframes eye {
+  from {
+    r: 15px;
+  }
+  to {
+    r: 20px;
+  }
+}
+@-webkit-keyframes rect {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes rect {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes star {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes star {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dropdown .device-box {
+    height: 80px;
+  }
+  .dropdown .device-box .dropdown-data {
+    margin: 0.5rem 2rem;
+  }
+  .dropdown .device-box .dropdown-data h1 {
+    font-size: 1.5rem;
+  }
+  .dropdown .device-box .dropdown-data .buttons {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+  }
+  .dropdown .device-box .dropdown-data .buttons .btn1,
+.dropdown .device-box .dropdown-data .buttons .btn2 {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0rem;
+  }
+}/*# sourceMappingURL=main.css.map */
