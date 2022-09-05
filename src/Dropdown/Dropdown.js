@@ -61,15 +61,15 @@ function Dropdown() {
                   [index].classList.toggle("rotate-btn");
               }}
             >
-              <AiOutlineRight size="50px" className="icon" />
+              <AiOutlineRight size="35px" className="icon" />
             </button>
             <BsFillPhoneFill size="75px" className="icon" />
             <h1>{data.codename}</h1>
           </div>
           <div className="dropdown-data">
+            <h1>Manufacturer : {data.oem}</h1>
             <h1>Device : {data.device}</h1>
             <h1>Maintained by: {data.maintainer}</h1>
-            <h1>Manufacturer : {data.oem}</h1>
             <div className="buttons">
               <button className="btn1">
                 <a href={data.data.response[0].url}>Download</a>

@@ -39,7 +39,7 @@ body {
   .device-box {
     background: white;
     width: 70%;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     margin: 0.5rem;
     border-radius: 10px;
     display: flex;
@@ -63,7 +63,7 @@ body {
           width: 30px;
         }
         h1 {
-          font-size: 1.8rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -199,10 +199,18 @@ body {
   .dropdown {
     .device-box {
       height: 80px;
+      .main-data {
+        button {
+          .icon {
+            width: 25px;
+          }
+        }
+      }
       .dropdown-data {
         margin: 0.5rem 2rem;
         h1 {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
+          font-weight: 400;
         }
         .buttons {
           display: flex;
