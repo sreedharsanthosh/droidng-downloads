@@ -19,6 +19,14 @@ body {
   width: 100px;
   margin: 0rem 0.4rem;
 }
+@media only screen and (max-width: 768px) {
+  .nav img {
+    width: 75px;
+  }
+  .nav h1 {
+    font-size: 1.5rem;
+  }
+}
 
 .dropdown {
   display: flex;
@@ -39,7 +47,7 @@ body {
   flex-direction: column;
   height: 120px;
   overflow: hidden;
-  transition: height 1s ease-out;
+  transition: all 0.5s;
   color: rgb(50, 50, 50);
   box-shadow: -3px 3px 9px 0px rgba(0, 0, 0, 0.3);
 }
@@ -47,6 +55,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 @media only screen and (max-width: 768px) {
   .dropdown .device-box {
@@ -84,8 +93,8 @@ body {
 .dropdown .device-box .dropdown-data .buttons .btn1 {
   border-radius: 6px;
   padding: 0.6rem 2rem;
-  background: #ff9793;
-  border: 1px solid #ff9793;
+  background: #e7514b;
+  border: 1px solid #e7514b;
   font-size: 1.5rem;
   transition: all 0.5s ease;
 }
@@ -102,14 +111,14 @@ body {
 .dropdown .device-box .dropdown-data .btn2 {
   border-radius: 6px;
   padding: 0.6rem 2rem;
-  border: 1px solid #ff6d67;
+  border: 1px solid #e7514b;
   margin: 0rem 1rem;
   background: transparent;
   font-size: 1.5rem;
   transition: all 0.5s ease;
 }
 .dropdown .device-box .dropdown-data .btn2:hover {
-  background: #ff6d67;
+  background: #e7514b;
 }
 .dropdown .device-box .dropdown-data .btn2:hover a {
   color: white;
@@ -117,6 +126,10 @@ body {
 .dropdown .device-box .dropdown-data .btn2 a {
   text-decoration: none;
   color: black;
+}
+
+.rotate-btn {
+  transform: rotate(90deg);
 }
 
 .loader {

@@ -25,6 +25,7 @@ function Dropdown() {
                 const deviceObj = {
                   device: device.name,
                   codename: device.codename,
+                  oem: device.oem,
                   maintainer: device.maintainer,
                   data: res.data,
                 };
@@ -50,11 +51,14 @@ function Dropdown() {
         <div className="device-box" key={index}>
           <div className="main-data">
             <button
+              className="btn"
               onClick={() => {
-                console.log("Active");
                 document
                   .querySelectorAll(".device-box")
                   [index].classList.toggle("device-box-active");
+                document
+                  .querySelectorAll(".btn")
+                  [index].classList.toggle("rotate-btn");
               }}
             >
               <AiOutlineRight size="50px" className="icon" />
@@ -65,6 +69,7 @@ function Dropdown() {
           <div className="dropdown-data">
             <h1>Device : {data.device}</h1>
             <h1>Maintained by: {data.maintainer}</h1>
+            <h1>Manufacturer : {data.oem}</h1>
             <div className="buttons">
               <button className="btn1">
                 <a href={data.data.response[0].url}>Download</a>
